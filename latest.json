@@ -1,10 +1,15 @@
 {
- "version": "11.2.0",
+ "version": "11.3.0",
  "date": "2026-11-21",
  "notes": [
-  "New look: Midnight. Black, white and violet, sleek and calm, at the owner's request: near-black pages with soft violet, magenta and amber glows on the home screen, a floating glass top bar, one clean typeface (Inter Tight), quiet hairline borders, and a gradient on the home question. The section list is quieter (plain codes, small rating dots, one violet marker for where you are), and the home screen is decluttered: one question, one box, four example claims, and Listen live.",
-  "Themes. Midnight (dark) is the default. Settings → Look offers Daylight (a white-and-violet light theme), Match my device, Sepia and High contrast. Settings → Typeface offers Sleek (the default) or Book (serif reading text).",
-  "No serious or critical accessibility problems in either theme (automated check on phone and desktop: home, the answer view, the Bible reader and the word study). The page is about 80 KB smaller (one typeface fewer). Nothing in the teaching changed."
+  "A new layout: an app with a side rail (owner's choice of three layouts). The handbook is no longer one very long page:",
+  "A slim rail on the left (bottom tabs on phones) goes to Home, the Library, the Bible, Practice, Live, Ask and Spar, with Search and More at the bottom.",
+  "Home is a dashboard: the question box, then Keep going (continue, practice, saved, mastered), then who you're talking with.",
+  "The Library shows every topic as a tile, grouped by part, with its cards, ratings and videos; type to filter the tiles.",
+  "Each topic opens on its own page with a breadcrumb back to the Library, the previous and next topics at the end, and (on wide screens) its cards listed on the right.",
+  "Filters and searches that span the whole handbook show Results; clearing them goes back where you were. The back button, shared links to a card, and every search result still land in the right place.",
+  "On phones the tabs are Home, Library, Bible, Live, Practice and More (Ask, Spar, Go to anything, Saved cards, Video library, Progress, Settings, What's new).",
+  "Nothing in the teaching changed."
  ],
  "page": {
   "online": "https://munk11op.github.io/apologetics-handbook/",
@@ -19,13 +24,13 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "0c266f1a124ba1197b10395a7a39bd914145892979679b5d3b9a113b6de4442b",
-    "size": 3945509
+    "sha256": "82d242830fad6abfd55644572569e77a30ec44c3e14aaab9df351cee8dd96348",
+    "size": 3981679
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "150ad3ee6a88c0a96efb16c2fe7baa6f919174f85a79a10cfa33d3f30567efdf",
+    "sha256": "cb645113a2834cf74871897c18d75e24849e16b18d19ee12cdd62748190a4192",
     "size": 37715
    },
    {
