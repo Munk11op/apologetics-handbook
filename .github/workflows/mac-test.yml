@@ -1,0 +1,98 @@
+name: Mac test
+# Installs the newest "Handbook Live for Mac" release on one of GitHub's free Macs exactly as a user would, then:
+# checks the files, speaks a claim with the Mac's own voice and confirms the app hears it, checks the updater
+# against this update page, opens the downloaded handbook in Safari's engine (WebKit) and uses the Bible reader
+# and the word study, and finally uninstalls. Runs when a release is published, or by hand (Actions > Run workflow).
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+permissions:
+  contents: read
+jobs:
+  mac:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    env:
+      D: ${{ github.workspace }}/../home-data
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get the newest release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download --repo "$GITHUB_REPOSITORY" --pattern "Handbook-Live-for-Mac.zip" --pattern "Apologetics-Handbook-offline.zip" --dir pkg
+          cd pkg && unzip -q Handbook-Live-for-Mac.zip && unzip -q Apologetics-Handbook-offline.zip -d offline && ls -la . offline
+          sw_vers; python3 --version
+      - name: Install, answering nothing (as a double-click would)
+        run: |
+          cd pkg/Handbook\ Live\ for\ Mac*/
+          HANDBOOK_NO_OPEN=1 bash "Install Handbook Live.command" </dev/null
+      - name: Check what was installed
+        run: |
+          DATA="$HOME/Library/Application Support/Handbook Live"
+          APP="$HOME/Applications/Handbook Live.app"
+          for f in live_app.py app_audio.py updater.py Apologetics_Handbook.html bible/BSB.js bible/WLC.js bible/words/lex-H.js bible/words/deuteronomy.js .venv/bin/python "Uninstall Handbook Live.command"; do
+            test -e "$DATA/$f" || { echo "MISSING: $f"; exit 1; }
+          done
+          test -x "$APP/Contents/MacOS/Handbook Live"
+          plutil -lint "$APP/Contents/Info.plist"
+          grep -q NSMicrophoneUsageDescription "$APP/Contents/Info.plist"
+          "$DATA/.venv/bin/python" -c "import faster_whisper, soundcard, webview, numpy; print('imports ok')"
+          echo "installed files ok"
+      - name: Speak a claim with the Mac's voice
+        run: |
+          say -o claim.aiff "Jesus never said, I am God, worship me."
+          afconvert -f WAVE -d LEI16@16000 -c 1 claim.aiff claim.wav
+          ls -la claim.wav
+      - name: Run the app on the clip; it must serve the handbook and hear the claim
+        run: |
+          DATA="$HOME/Library/Application Support/Handbook Live"
+          "$DATA/.venv/bin/python" "$DATA/live_app.py" --no-open --no-update --port 47700 --test "$PWD/claim.wav" > app.log 2>&1 &
+          for i in $(seq 1 120); do curl -sf http://127.0.0.1:47700/Apologetics_Handbook.html -o page.html && break; sleep 2; done
+          grep -q "Apologetics Handbook" page.html && echo "page served"
+          curl -sf http://127.0.0.1:47700/bible/words/lex-H.js -o /dev/null && echo "bible files served"
+          curl -s http://127.0.0.1:47700/live/sources | tee sources.json; echo
+          (curl -sN --max-time 240 http://127.0.0.1:47700/live/events > events.txt) || true
+          echo "----- app log"; cat app.log
+          echo "----- events"; grep -E "^data" events.txt | head -40
+          grep -q "event: line" events.txt || { echo "the app heard nothing"; exit 1; }
+          grep -i "line" -A1 events.txt | grep -qi "god" && echo "HEARD THE CLAIM"
+      - name: Updater against the update page
+        run: |
+          DATA="$HOME/Library/Application Support/Handbook Live"
+          cd "$DATA"
+          .venv/bin/python - <<'PY'
+          import updater, os
+          m = updater.fetch_manifest()
+          print("update page says", m["version"], "with", len(m["app"]["files"]), "files")
+          todo = updater.plan(m, ".")
+          print("files differing right after install:", [e["path"] for e, _ in todo])
+          assert not todo, "a fresh install should match the update page"
+          open(os.path.join("bible", "BSB.js"), "w").write("damaged")
+          assert [e["path"] for e, _ in updater.plan(m, ".")] == ["bible/BSB.js"]
+          print("repaired:", updater.apply(m, "."))
+          assert not updater.plan(m, "."), "after the update nothing differs"
+          print("updater ok")
+          PY
+      - name: The downloaded handbook in Safari's engine (WebKit)
+        run: |
+          python3 -m venv wk && wk/bin/pip install --quiet playwright==1.49.1 && wk/bin/python -m playwright install webkit
+          wk/bin/python .github/webkit_check.py "pkg/offline/Apologetics_Handbook.html"
+      - name: Uninstall
+        run: |
+          DATA="$HOME/Library/Application Support/Handbook Live"
+          pkill -f live_app.py || true
+          echo yes | bash "$DATA/Uninstall Handbook Live.command"
+          test ! -e "$DATA" && test ! -e "$HOME/Applications/Handbook Live.app" && echo "uninstalled cleanly"
+      - name: Keep the logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mac-test-logs
+          path: |
+            app.log
+            events.txt
+            sources.json
+            webkit-*.png
+          if-no-files-found: ignore

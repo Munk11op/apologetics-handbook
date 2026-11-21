@@ -1,0 +1,571 @@
+{
+ "version": "11.1.0",
+ "date": "2026-11-20",
+ "notes": [
+  "The whole Bible, in the original languages and faithful English. A full Bible reader with the Hebrew Old Testament (Westminster Leningrad Codex), the Greek Septuagint, three Greek New Testaments (Textus Receptus, Byzantine Majority, a critical text), the Aramaic (Syriac) Peshitta, the Latin Vulgate, and English: BSB, KJV, LSV, ASV, YLT, WEB, Darby, Geneva 1599, Douay-Rheims, Brenton's Septuagint, and Murdock's and Etheridge's translations of the Peshitta. Read any two side by side. Search, a reading plan of the chapters the handbook relies on most, and \"Mark this chapter as read\".",
+  "Tied to the handbook. Verses the handbook cites are marked with how many cards use them; one tap lists those cards. Every Bible reference in a card opens the verse viewer, which now offers \"Read the whole chapter\", \"Learn this verse\" and the Hebrew or Greek words.",
+  "Hebrew and Greek word study. For any verse: each original word with how it sounds, a word-for-word English gloss and its Strong's number. Tap a word for a short dictionary entry, how it is rendered across the Bible, and every other verse that uses it. Greek words that only some printed Greek New Testaments contain are labeled (for example \"Only in TR\" in 1 John 5:7). Type a Strong's number (like H8610) in the Bible's search or in Go to anything.",
+  "Memory verses. Add any verse to Practice; it gets its own \"Memory verses\" deck.",
+  "Updates. Handbook Live (Windows and Mac) now updates itself once a day from the handbook's update page, checking every file's fingerprint first; the downloaded copy shows a bar when a new version is ready. Nothing about you is sent, and both can be turned off. The online link always shows the newest version.",
+  "Mac. The Mac package is now tested on a real Mac (GitHub's macOS machines): install, the app hearing a spoken claim, the updater, the handbook in Safari's engine, and uninstall.",
+  "LSB, NASB, NKJV and ESV stay as links (they are copyrighted); the LSV, a very literal modern translation that may be shared freely, is included instead."
+ ],
+ "page": {
+  "online": "https://munk11op.github.io/apologetics-handbook/",
+  "download": "https://github.com/Munk11op/apologetics-handbook/releases/latest/download/Apologetics-Handbook-offline.zip"
+ },
+ "installers": {
+  "windows": "https://github.com/Munk11op/apologetics-handbook/releases/latest/download/Handbook-Live-Setup.exe",
+  "mac": "https://github.com/Munk11op/apologetics-handbook/releases/latest/download/Handbook-Live-for-Mac.zip"
+ },
+ "app": {
+  "files": [
+   {
+    "path": "Apologetics_Handbook.html",
+    "src": "index.html",
+    "sha256": "fa0dbe62fb2c4d5098f1551c4539f0537c4c1e829245482014080e025fc28d7a",
+    "size": 4025433
+   },
+   {
+    "path": "live_app.py",
+    "src": "app/live_app.py",
+    "sha256": "d0f7611623cdea6444ab07c9df837fd776eb981c6c695e86a382f7c259c60455",
+    "size": 38773
+   },
+   {
+    "path": "app_audio.py",
+    "src": "app/app_audio.py",
+    "sha256": "0cdef2977207d86c5a4612d40f3ee2982804c4b8efad49f762878182dd8907a7",
+    "size": 12298
+   },
+   {
+    "path": "updater.py",
+    "src": "app/updater.py",
+    "sha256": "4a94e8dc84e9b89ce0a3b5419b33d04ed254e46385a1ea522d9c7fb23d1ccf29",
+    "size": 4237
+   },
+   {
+    "path": "bible/ASV.js",
+    "src": "bible/ASV.js",
+    "sha256": "b3ed0ac4adb965f26081675d3a9e0fd8171c651fedcef8343b021efe4ee97ab9",
+    "size": 1638220
+   },
+   {
+    "path": "bible/BSB.js",
+    "src": "bible/BSB.js",
+    "sha256": "7e0e800b91552a1e59a199538e01e057f41e742f4c4768c1bf3ed7edcfdc7608",
+    "size": 1627238
+   },
+   {
+    "path": "bible/BYZ.js",
+    "src": "bible/BYZ.js",
+    "sha256": "f7ef8c773c0685dd399c2b4c8997bc99223ce16d100823c046cfa2f94653feac",
+    "size": 536026
+   },
+   {
+    "path": "bible/DBY.js",
+    "src": "bible/DBY.js",
+    "sha256": "6873dfab01bc8b81f8f40135a99ba0261b8cfc9548d5be1f508610a5e53a1f9a",
+    "size": 1635847
+   },
+   {
+    "path": "bible/DRA.js",
+    "src": "bible/DRA.js",
+    "sha256": "e0fd4389481302cd8eb4f340b053f9a1228a2c5bb20a430ccd89430af2cd8f5d",
+    "size": 1877443
+   },
+   {
+    "path": "bible/ETH.js",
+    "src": "bible/ETH.js",
+    "sha256": "e5ae4b8f1c6090562dc0b4b5fd81cfc9d7a516695a3cbf0c0f0595f81b0de09e",
+    "size": 410968
+   },
+   {
+    "path": "bible/GNV.js",
+    "src": "bible/GNV.js",
+    "sha256": "cedd56fc27b63f21685dbfc2d63bbbd277b610a2755c511c5c51eeffe6f5fe4f",
+    "size": 1660511
+   },
+   {
+    "path": "bible/KJV.js",
+    "src": "bible/KJV.js",
+    "sha256": "faa8b217661e2c353560c4d1530995d24b7497dfc06fca0ee53d9a2829803cd1",
+    "size": 1997521
+   },
+   {
+    "path": "bible/LSV.js",
+    "src": "bible/LSV.js",
+    "sha256": "db7748e60b506e6a743754a4bc741f9bf65aee136d8418f80f0c9978bf4baff9",
+    "size": 1614882
+   },
+   {
+    "path": "bible/LXX.js",
+    "src": "bible/LXX.js",
+    "sha256": "81ee8e35fc384c52477c4764396ea7383f40406425fd12b5f6bd863b27f4ef9c",
+    "size": 2021133
+   },
+   {
+    "path": "bible/LXXE.js",
+    "src": "bible/LXXE.js",
+    "sha256": "db9db44f29f2ee7cdac3b0e61154a41e73fa3a803c902689be42b6c421e3237c",
+    "size": 1572569
+   },
+   {
+    "path": "bible/MUR.js",
+    "src": "bible/MUR.js",
+    "sha256": "ac9374d9df1209dd74a7cae6340d5f6fa3533df86ee0e605304871333dad64c6",
+    "size": 414286
+   },
+   {
+    "path": "bible/PESH.js",
+    "src": "bible/PESH.js",
+    "sha256": "7eb924cabd0c7e14375c6bd5db0e106391919bc6060dc42e1f1be0cdd653acae",
+    "size": 336975
+   },
+   {
+    "path": "bible/TCGNT.js",
+    "src": "bible/TCGNT.js",
+    "sha256": "9b985c5f1caaaa04dc000349231f69009be55e9c88547cd8ea335f371b440942",
+    "size": 536551
+   },
+   {
+    "path": "bible/TR.js",
+    "src": "bible/TR.js",
+    "sha256": "bcb11a940da9b343db2cdf06a57ad0b988e363b1699a002f7f5dd7cefdf8c821",
+    "size": 541420
+   },
+   {
+    "path": "bible/VUL.js",
+    "src": "bible/VUL.js",
+    "sha256": "63342d651fac83fd9008f28ef7e537bf33609632ecddc9b545aebee278151789",
+    "size": 1849985
+   },
+   {
+    "path": "bible/WEB.js",
+    "src": "bible/WEB.js",
+    "sha256": "10eea278793e351a07ebadcd2ae6021a3001fcba44e863747d2d55e67db58277",
+    "size": 1608765
+   },
+   {
+    "path": "bible/WLC.js",
+    "src": "bible/WLC.js",
+    "sha256": "60a52bdeef0bdd7754c65eeaa88033c7a696d58afd78337e89539d1969ef9d3c",
+    "size": 1767262
+   },
+   {
+    "path": "bible/words/1_chronicles.js",
+    "src": "bible/words/1_chronicles.js",
+    "sha256": "ebf02758ac62d9b3b9fa4843150f4bb5fdfe61ad5b996e92f642b6e5c87832af",
+    "size": 190653
+   },
+   {
+    "path": "bible/words/1_corinthians.js",
+    "src": "bible/words/1_corinthians.js",
+    "sha256": "71b141a80a051b914447252393bbb3fb46d274aa4a0bdc914b23fbb45eb5904e",
+    "size": 93586
+   },
+   {
+    "path": "bible/words/1_john.js",
+    "src": "bible/words/1_john.js",
+    "sha256": "59f266bb616b41a8c0544c6f7b289e3f101b72e6b9fa3ce2d5df5af1126a2f73",
+    "size": 21587
+   },
+   {
+    "path": "bible/words/1_kings.js",
+    "src": "bible/words/1_kings.js",
+    "sha256": "4ffd6d9dee6b1754c9d49bda326353bcfa97ae584b4f59aa444ffebefb38f732",
+    "size": 208796
+   },
+   {
+    "path": "bible/words/1_peter.js",
+    "src": "bible/words/1_peter.js",
+    "sha256": "8affb7bc045694ef8a3175c53e2631cd22d98ffbd1971750a4addabd5016f920",
+    "size": 29632
+   },
+   {
+    "path": "bible/words/1_samuel.js",
+    "src": "bible/words/1_samuel.js",
+    "sha256": "2d822ae2d3a76e7ffb008f1402cb16a9d589169ba82ca5a5cc75787f93bc1c03",
+    "size": 225989
+   },
+   {
+    "path": "bible/words/1_thessalonians.js",
+    "src": "bible/words/1_thessalonians.js",
+    "sha256": "4f8f8105e6b6bb0e3ad3c09fd3d4a107b52a75d826afbcf02fc7c47a57a05eff",
+    "size": 20992
+   },
+   {
+    "path": "bible/words/1_timothy.js",
+    "src": "bible/words/1_timothy.js",
+    "sha256": "36ec5e3f55d4c6c2351fbc8ae6e9a50872e045bb171c7b46582f96f6cc349295",
+    "size": 29022
+   },
+   {
+    "path": "bible/words/2_chronicles.js",
+    "src": "bible/words/2_chronicles.js",
+    "sha256": "e1a912474ec647d2c62723f62340b311810140b58922e4d08fb23cdbe2a2101b",
+    "size": 235789
+   },
+   {
+    "path": "bible/words/2_corinthians.js",
+    "src": "bible/words/2_corinthians.js",
+    "sha256": "930b34911eff690ecaf0b7424cade135bb6f98d4aac640856682ad76ebafdc4a",
+    "size": 63486
+   },
+   {
+    "path": "bible/words/2_john.js",
+    "src": "bible/words/2_john.js",
+    "sha256": "942f834ae77ffe02b1625ca7fe6b1a4e9b9f456c4bfb31dfca8a0c1c1d2395d9",
+    "size": 4583
+   },
+   {
+    "path": "bible/words/2_kings.js",
+    "src": "bible/words/2_kings.js",
+    "sha256": "720bca199a45e6c8617218ee1a4db9e17151c5519be64ba7b18a995543f1e0a1",
+    "size": 195224
+   },
+   {
+    "path": "bible/words/2_peter.js",
+    "src": "bible/words/2_peter.js",
+    "sha256": "0f63e2590cfa32aaa15c136b4f0e94fec874c471317ee6ffd88d69a6fe0210b5",
+    "size": 20136
+   },
+   {
+    "path": "bible/words/2_samuel.js",
+    "src": "bible/words/2_samuel.js",
+    "sha256": "4dd70dcf6de308128c697076dbe7ff5b89d70671b326f316444f538bd97a8a38",
+    "size": 189353
+   },
+   {
+    "path": "bible/words/2_thessalonians.js",
+    "src": "bible/words/2_thessalonians.js",
+    "sha256": "6692f7d6e2fd90e809bce55c5e4ef8b06afdc60d4bae35b8f1450dce0e34900d",
+    "size": 13020
+   },
+   {
+    "path": "bible/words/2_timothy.js",
+    "src": "bible/words/2_timothy.js",
+    "sha256": "60e0b83a2790a02879d52c7ed3032c58535082dc8c362a02d88541a084dd0e9a",
+    "size": 22970
+   },
+   {
+    "path": "bible/words/3_john.js",
+    "src": "bible/words/3_john.js",
+    "sha256": "d85490e8dc3b69c3001a87943d3ea8d09bee7d001839ea5d2f378ff0dc49a284",
+    "size": 4735
+   },
+   {
+    "path": "bible/words/acts.js",
+    "src": "bible/words/acts.js",
+    "sha256": "7c257dc8e0ca282afd0b9a5381b91194d42ff913c42bdb1947d29f1cd181fad0",
+    "size": 275289
+   },
+   {
+    "path": "bible/words/amos.js",
+    "src": "bible/words/amos.js",
+    "sha256": "833b6e9d5014d0ca155a78696e649663e14f6775e3e73835b20f86ad570c210a",
+    "size": 40393
+   },
+   {
+    "path": "bible/words/colossians.js",
+    "src": "bible/words/colossians.js",
+    "sha256": "7e7180f9cee3ca47892d44aafb9d8544e7023c2ba2709912a6b19ee6465c3015",
+    "size": 24179
+   },
+   {
+    "path": "bible/words/daniel.js",
+    "src": "bible/words/daniel.js",
+    "sha256": "51a1f6eb6f5a8148d66f3140f48b2ea5948c84678a169bbd399f7fede9ca1345",
+    "size": 107291
+   },
+   {
+    "path": "bible/words/deuteronomy.js",
+    "src": "bible/words/deuteronomy.js",
+    "sha256": "29a15bc27ba7464f321c46c7ff3e6e23a56168e0c9361efe8f3529bf866b4c2e",
+    "size": 242452
+   },
+   {
+    "path": "bible/words/ecclesiastes.js",
+    "src": "bible/words/ecclesiastes.js",
+    "sha256": "c9ba121cb9b9764fe5cd819d7811bc387e22b9bd65b284e1d1039907d8790c02",
+    "size": 53461
+   },
+   {
+    "path": "bible/words/ephesians.js",
+    "src": "bible/words/ephesians.js",
+    "sha256": "b04080d14d4817e1198d991c176278c7af44a2de19838859b89393d55a72e138",
+    "size": 33626
+   },
+   {
+    "path": "bible/words/esther.js",
+    "src": "bible/words/esther.js",
+    "sha256": "767fcd62df632bb46e5c2c80ef48188c4c72bedafdc7984180dd30a252b0cb51",
+    "size": 50451
+   },
+   {
+    "path": "bible/words/exodus.js",
+    "src": "bible/words/exodus.js",
+    "sha256": "25cf4aab56dc7b659cb398ea9e40eb3f5172693e573ba5f7c41f5a1701b02284",
+    "size": 260587
+   },
+   {
+    "path": "bible/words/ezekiel.js",
+    "src": "bible/words/ezekiel.js",
+    "sha256": "f7d5ffa37fc8b9c7250cc7694acc8ed4552aeefd6462d86a9c43e44252771bdb",
+    "size": 311340
+   },
+   {
+    "path": "bible/words/ezra.js",
+    "src": "bible/words/ezra.js",
+    "sha256": "4c97a0000a2441631efdfa1a32d3caa1386861f9aa32e68cbc325ab4b643710f",
+    "size": 69957
+   },
+   {
+    "path": "bible/words/galatians.js",
+    "src": "bible/words/galatians.js",
+    "sha256": "2339e5db60c63a8a4185bc8a9fe1eb6534ba792cacc07095bc5a2eda2d003345",
+    "size": 33650
+   },
+   {
+    "path": "bible/words/genesis.js",
+    "src": "bible/words/genesis.js",
+    "sha256": "20862d2c4cf914e4fd4b49e9752589ed256734f20e1c006ccd2ad1bdd8ca00d1",
+    "size": 332424
+   },
+   {
+    "path": "bible/words/habakkuk.js",
+    "src": "bible/words/habakkuk.js",
+    "sha256": "96f717bdb6b9b57b15b1893b12fd84bc72acda18b87b16acf00dd9bd3ff783ed",
+    "size": 17529
+   },
+   {
+    "path": "bible/words/haggai.js",
+    "src": "bible/words/haggai.js",
+    "sha256": "8e55cd82277c1bcee3af52b3b9c2c6cc6d9eb85dcc74209b0998a23097aa6756",
+    "size": 10903
+   },
+   {
+    "path": "bible/words/hebrews.js",
+    "src": "bible/words/hebrews.js",
+    "sha256": "3931d25d3020b8220f1bf0c0c24dafc42e0dd2269db8097f2dbac906283234f1",
+    "size": 79348
+   },
+   {
+    "path": "bible/words/hosea.js",
+    "src": "bible/words/hosea.js",
+    "sha256": "a61414432519c3d02b15d07db6f7feb6dca7c35528ee7e69584f6563222aaf94",
+    "size": 51146
+   },
+   {
+    "path": "bible/words/isaiah.js",
+    "src": "bible/words/isaiah.js",
+    "sha256": "09e0ba3f2c638e475c546f22f5c02a6b930d9cbf756c39ff93cf06daaaab0520",
+    "size": 362195
+   },
+   {
+    "path": "bible/words/james.js",
+    "src": "bible/words/james.js",
+    "sha256": "6942112926fd520a1b6739892f71f55e7eb20fe768b269ab130330c616c7a2d2",
+    "size": 29134
+   },
+   {
+    "path": "bible/words/jeremiah.js",
+    "src": "bible/words/jeremiah.js",
+    "sha256": "6d9881ee196ce15884a182fe88cd1a30b9eab2dfd4f9545b9361b801df8f3e48",
+    "size": 385853
+   },
+   {
+    "path": "bible/words/job.js",
+    "src": "bible/words/job.js",
+    "sha256": "c2320648cb768c768e0d586f384f4a5316946f10900685be426354938e41b144",
+    "size": 183040
+   },
+   {
+    "path": "bible/words/joel.js",
+    "src": "bible/words/joel.js",
+    "sha256": "b433512ed817a90ebe9cf126b33eae6e20b1909d0d9f35c0c0cb41d842cfc23a",
+    "size": 21289
+   },
+   {
+    "path": "bible/words/john.js",
+    "src": "bible/words/john.js",
+    "sha256": "69c44f28933c2e08e4f59ddf6a2b68b5f9a4c405b9d60b3874f3b916a76ca640",
+    "size": 182877
+   },
+   {
+    "path": "bible/words/jonah.js",
+    "src": "bible/words/jonah.js",
+    "sha256": "06864b13a3c5e1aa2e49ba8745874650d28205ccac8673627d6101aab3e3ff7c",
+    "size": 14154
+   },
+   {
+    "path": "bible/words/joshua.js",
+    "src": "bible/words/joshua.js",
+    "sha256": "a604363b3341d0efaf35a93486144645282ddd99365eeb6784308b0bf49f127f",
+    "size": 157587
+   },
+   {
+    "path": "bible/words/jude.js",
+    "src": "bible/words/jude.js",
+    "sha256": "6538b8238cc8e62866eb84071b2bd98c950711f0beb2ad62607ce26c4e3b684a",
+    "size": 10025
+   },
+   {
+    "path": "bible/words/judges.js",
+    "src": "bible/words/judges.js",
+    "sha256": "cb4875c973417f3046ea5d113e6298acea6d1d62e7a88a30d1a7c1af34c94a3f",
+    "size": 166031
+   },
+   {
+    "path": "bible/words/lamentations.js",
+    "src": "bible/words/lamentations.js",
+    "sha256": "83ed45beed483085c6063c0e1760d3bf60417e7a33900c3f064663e08636849d",
+    "size": 35393
+   },
+   {
+    "path": "bible/words/leviticus.js",
+    "src": "bible/words/leviticus.js",
+    "sha256": "3dec595aa11628850f03620dbd1c9196b87b8bec1e8de0961d5849f9afb78613",
+    "size": 164078
+   },
+   {
+    "path": "bible/words/lex-G.js",
+    "src": "bible/words/lex-G.js",
+    "sha256": "0adaed7b866b8fca2f0449114286c5d83ba82315f743564be24662401f5ca2ef",
+    "size": 1291594
+   },
+   {
+    "path": "bible/words/lex-H.js",
+    "src": "bible/words/lex-H.js",
+    "sha256": "23f44613dd3c2c3bb906c6cc99282240b788f1ce193272ac37fcb8ad32990ae5",
+    "size": 1472222
+   },
+   {
+    "path": "bible/words/luke.js",
+    "src": "bible/words/luke.js",
+    "sha256": "2954e236a0820e0d138df4d73a702a3f3e379101d787c15dbcdad89eb17c897c",
+    "size": 278041
+   },
+   {
+    "path": "bible/words/malachi.js",
+    "src": "bible/words/malachi.js",
+    "sha256": "5cfb5e1aaa77ea464c74d68d0b42ef19ea7081fd1476e7dee39cdd0ece03cae4",
+    "size": 18664
+   },
+   {
+    "path": "bible/words/mark.js",
+    "src": "bible/words/mark.js",
+    "sha256": "d4ed3363621ad65780108cd98b00472d7b9d48f3438064cec9ef1b034494baf3",
+    "size": 162101
+   },
+   {
+    "path": "bible/words/matthew.js",
+    "src": "bible/words/matthew.js",
+    "sha256": "882b2a3663b569f03082d1342a8ac8ce0e63c8b347e07d73d5a7224b2d7830e8",
+    "size": 245280
+   },
+   {
+    "path": "bible/words/micah.js",
+    "src": "bible/words/micah.js",
+    "sha256": "58d67e674ef5390918b6d23100a8623edfab5c7475afd0ff61591e8cc80bb014",
+    "size": 32734
+   },
+   {
+    "path": "bible/words/nahum.js",
+    "src": "bible/words/nahum.js",
+    "sha256": "9fa84735f19fa7b916f3989fe8a83fe1fcab68efe387adeab2139ea8cefd3a60",
+    "size": 15354
+   },
+   {
+    "path": "bible/words/nehemiah.js",
+    "src": "bible/words/nehemiah.js",
+    "sha256": "8668c8b37c0f2517f9dbcef3d63594878f398bbb2e236b69403e0c9bf64409c4",
+    "size": 101817
+   },
+   {
+    "path": "bible/words/numbers.js",
+    "src": "bible/words/numbers.js",
+    "sha256": "2dd153b75cfc9b11ecf4f5c25cac612db4248c671832643a5573f626007b172c",
+    "size": 237412
+   },
+   {
+    "path": "bible/words/obadiah.js",
+    "src": "bible/words/obadiah.js",
+    "sha256": "e5088221321317e95dd51b416db0c0e1daf7674cd34f1795c16647ccaf6d8811",
+    "size": 7444
+   },
+   {
+    "path": "bible/words/philemon.js",
+    "src": "bible/words/philemon.js",
+    "sha256": "ded7cebcc899b941876a78933db06ff47d8965d7a7cf817f5497d216b24586c6",
+    "size": 6605
+   },
+   {
+    "path": "bible/words/philippians.js",
+    "src": "bible/words/philippians.js",
+    "sha256": "c440572c84678a96b844d1b6188d7cb2202e094e810eb32e41148d30bc18e30c",
+    "size": 24824
+   },
+   {
+    "path": "bible/words/proverbs.js",
+    "src": "bible/words/proverbs.js",
+    "sha256": "290e38ddc0ee2a621cb5987940808c38d24bd90028c7ffc7bd090e0cd1b95b16",
+    "size": 147821
+   },
+   {
+    "path": "bible/words/psalms.js",
+    "src": "bible/words/psalms.js",
+    "sha256": "2ce819ac6f4033fed70c9d7c1e80cf4aa05cde6ea4eb23826b6c3bee23ce36ee",
+    "size": 410871
+   },
+   {
+    "path": "bible/words/revelation.js",
+    "src": "bible/words/revelation.js",
+    "sha256": "cd26ada5335823a4c22f6fcd15bc7e6b6618027d1eb68d5020098688b072c5bb",
+    "size": 117443
+   },
+   {
+    "path": "bible/words/romans.js",
+    "src": "bible/words/romans.js",
+    "sha256": "491ff612807c5baf53d7e5f797f388763188ff018ef3aa2bfabfbee58cb57ff5",
+    "size": 95059
+   },
+   {
+    "path": "bible/words/ruth.js",
+    "src": "bible/words/ruth.js",
+    "sha256": "6818070023a3388439a18123710a0bde4b3800c9b2a581f0a49ff169a2ae1b94",
+    "size": 24685
+   },
+   {
+    "path": "bible/words/song_of_songs.js",
+    "src": "bible/words/song_of_songs.js",
+    "sha256": "5547c456b21dc052f950f8362adf29848f85d77a9529a6390beb80c5533abf4d",
+    "size": 28174
+   },
+   {
+    "path": "bible/words/titus.js",
+    "src": "bible/words/titus.js",
+    "sha256": "5dc89e26b77739c721bb0ece8cce9186b87e8cc5168f333aa8b645106b91976a",
+    "size": 13670
+   },
+   {
+    "path": "bible/words/zechariah.js",
+    "src": "bible/words/zechariah.js",
+    "sha256": "705e1bbebd15fca8aa4d3e954ff98cc42fabecb2b59c2e5956f6fb1986d09c77",
+    "size": 57174
+   },
+   {
+    "path": "bible/words/zephaniah.js",
+    "src": "bible/words/zephaniah.js",
+    "sha256": "a412758341677fa4571b41e86d111996ea474050abbea8a9ff1c65db3cee529d",
+    "size": 17422
+   },
+   {
+    "path": "bible/YLT.js",
+    "src": "bible/YLT.js",
+    "sha256": "23811feaa01b8e9830e556e918bf23b3f314732321c804caedb2e9b8bbc0b552",
+    "size": 1630729
+   }
+  ]
+ }
+}
