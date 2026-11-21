@@ -1,8 +1,10 @@
 {
- "version": "11.1.1",
- "date": "2026-11-20",
+ "version": "11.2.0",
+ "date": "2026-11-21",
  "notes": [
-  "Fixes Handbook Live's self-update: a leftover second update check could stop a newer version from being downloaded. Everything else is as in 11.1.0."
+  "New look: Midnight. Black, white and violet, sleek and calm, at the owner's request: near-black pages with soft violet, magenta and amber glows on the home screen, a floating glass top bar, one clean typeface (Inter Tight), quiet hairline borders, and a gradient on the home question. The section list is quieter (plain codes, small rating dots, one violet marker for where you are), and the home screen is decluttered: one question, one box, four example claims, and Listen live.",
+  "Themes. Midnight (dark) is the default. Settings → Look offers Daylight (a white-and-violet light theme), Match my device, Sepia and High contrast. Settings → Typeface offers Sleek (the default) or Book (serif reading text).",
+  "No serious or critical accessibility problems in either theme (automated check on phone and desktop: home, the answer view, the Bible reader and the word study). The page is about 80 KB smaller (one typeface fewer). Nothing in the teaching changed."
  ],
  "page": {
   "online": "https://munk11op.github.io/apologetics-handbook/",
@@ -17,14 +19,14 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "327024e7aea8167ea1f74698a4017bd9038ab0367d7104830eb2eae331188190",
-    "size": 4025433
+    "sha256": "0c266f1a124ba1197b10395a7a39bd914145892979679b5d3b9a113b6de4442b",
+    "size": 3945509
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "30401d207360b5be095be022b27e90e459899d8d32a70397270c97d00a52c69f",
-    "size": 38641
+    "sha256": "150ad3ee6a88c0a96efb16c2fe7baa6f919174f85a79a10cfa33d3f30567efdf",
+    "size": 37715
    },
    {
     "path": "app_audio.py",

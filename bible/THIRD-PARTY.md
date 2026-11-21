@@ -7,9 +7,8 @@ Everything the app uses that someone else made: what it is, the version, its lic
 
 | What | Version | License | Where it comes from |
 |---|---|---|---|
-| Fraunces (headings typeface) | Google Fonts release, Latin subset (woff2), weights 600–800 | SIL Open Font License 1.1 | Bundled: `src/fonts/Fraunces.woff2`, embedded by build.py |
-| Newsreader (reading typeface), regular and italic | Google Fonts release, Latin subset (woff2) | SIL Open Font License 1.1 | Bundled: `src/fonts/Newsreader*.woff2` |
-| Inter Tight (buttons and labels) | Google Fonts release, Latin subset (woff2), weights 400–700 | SIL Open Font License 1.1 | Bundled: `src/fonts/InterTight.woff2` |
+| Newsreader (reading typeface when Settings → Typeface is "Book"), regular and italic | Google Fonts release, Latin subset (woff2) | SIL Open Font License 1.1 | Bundled: `src/fonts/Newsreader*.woff2` |
+| Inter Tight (the main typeface: headings, reading text and controls) | Google Fonts release, Latin subset (woff2), weights 400–700 | SIL Open Font License 1.1 | Bundled: `src/fonts/InterTight.woff2` |
 | Bible texts for the verse viewer (only the verses the handbook cites, compressed) | eBible.org "VPL" files, downloaded 2026-11-20 | See the next table | Bundled: `vendor/bible/*_vpl.zip`; build.py writes the cited verses into the page |
 
 No Arabic typeface is bundled: the handbook writes Arabic terms in Latin letters (transliteration) and contains no Arabic script. If Arabic script is ever added, embed a subset of Noto Naskh Arabic (SIL OFL 1.1) the same way.

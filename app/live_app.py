@@ -47,7 +47,7 @@ def mac_sound_input(sc):
     return virt or sc.default_microphone(), virt is not None
 PAGE = "Apologetics_Handbook.html"
 SETTINGS = os.path.join(HERE, "settings.json")
-APP_VERSION = "11.1.1"   # kept in step with the handbook's VERSION file by release.py
+APP_VERSION = "11.2.0"   # kept in step with the handbook's VERSION file by release.py
 
 
 def newer(a, b):
