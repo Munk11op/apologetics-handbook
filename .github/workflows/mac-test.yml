@@ -13,8 +13,6 @@ jobs:
   mac:
     runs-on: macos-latest
     timeout-minutes: 45
-    env:
-      D: ${{ github.workspace }}/../home-data
     steps:
       - uses: actions/checkout@v4
       - name: Get the newest release
@@ -75,9 +73,12 @@ jobs:
           assert not updater.plan(m, "."), "after the update nothing differs"
           print("updater ok")
           PY
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
       - name: The downloaded handbook in Safari's engine (WebKit)
         run: |
-          python3 -m venv wk && wk/bin/pip install --quiet playwright==1.49.1 && wk/bin/python -m playwright install webkit
+          python -m venv wk && wk/bin/pip install --quiet playwright && wk/bin/python -m playwright install webkit
           wk/bin/python .github/webkit_check.py "pkg/offline/Apologetics_Handbook.html"
       - name: Uninstall
         run: |

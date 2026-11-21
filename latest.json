@@ -1,14 +1,8 @@
 {
- "version": "11.1.0",
+ "version": "11.1.1",
  "date": "2026-11-20",
  "notes": [
-  "The whole Bible, in the original languages and faithful English. A full Bible reader with the Hebrew Old Testament (Westminster Leningrad Codex), the Greek Septuagint, three Greek New Testaments (Textus Receptus, Byzantine Majority, a critical text), the Aramaic (Syriac) Peshitta, the Latin Vulgate, and English: BSB, KJV, LSV, ASV, YLT, WEB, Darby, Geneva 1599, Douay-Rheims, Brenton's Septuagint, and Murdock's and Etheridge's translations of the Peshitta. Read any two side by side. Search, a reading plan of the chapters the handbook relies on most, and \"Mark this chapter as read\".",
-  "Tied to the handbook. Verses the handbook cites are marked with how many cards use them; one tap lists those cards. Every Bible reference in a card opens the verse viewer, which now offers \"Read the whole chapter\", \"Learn this verse\" and the Hebrew or Greek words.",
-  "Hebrew and Greek word study. For any verse: each original word with how it sounds, a word-for-word English gloss and its Strong's number. Tap a word for a short dictionary entry, how it is rendered across the Bible, and every other verse that uses it. Greek words that only some printed Greek New Testaments contain are labeled (for example \"Only in TR\" in 1 John 5:7). Type a Strong's number (like H8610) in the Bible's search or in Go to anything.",
-  "Memory verses. Add any verse to Practice; it gets its own \"Memory verses\" deck.",
-  "Updates. Handbook Live (Windows and Mac) now updates itself once a day from the handbook's update page, checking every file's fingerprint first; the downloaded copy shows a bar when a new version is ready. Nothing about you is sent, and both can be turned off. The online link always shows the newest version.",
-  "Mac. The Mac package is now tested on a real Mac (GitHub's macOS machines): install, the app hearing a spoken claim, the updater, the handbook in Safari's engine, and uninstall.",
-  "LSB, NASB, NKJV and ESV stay as links (they are copyrighted); the LSV, a very literal modern translation that may be shared freely, is included instead."
+  "Fixes Handbook Live's self-update: a leftover second update check could stop a newer version from being downloaded. Everything else is as in 11.1.0."
  ],
  "page": {
   "online": "https://munk11op.github.io/apologetics-handbook/",
@@ -23,14 +17,14 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "fa0dbe62fb2c4d5098f1551c4539f0537c4c1e829245482014080e025fc28d7a",
+    "sha256": "327024e7aea8167ea1f74698a4017bd9038ab0367d7104830eb2eae331188190",
     "size": 4025433
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "d0f7611623cdea6444ab07c9df837fd776eb981c6c695e86a382f7c259c60455",
-    "size": 38773
+    "sha256": "30401d207360b5be095be022b27e90e459899d8d32a70397270c97d00a52c69f",
+    "size": 38641
    },
    {
     "path": "app_audio.py",

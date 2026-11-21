@@ -47,7 +47,7 @@ def mac_sound_input(sc):
     return virt or sc.default_microphone(), virt is not None
 PAGE = "Apologetics_Handbook.html"
 SETTINGS = os.path.join(HERE, "settings.json")
-APP_VERSION = "11.1.0"   # kept in step with the handbook's VERSION file by release.py
+APP_VERSION = "11.1.1"   # kept in step with the handbook's VERSION file by release.py
 
 
 def newer(a, b):
@@ -598,7 +598,6 @@ class App:
 
     def start(self):
         self.transcriber.start()
-        threading.Thread(target=check_for_update, args=(self.settings, lambda m: self.set_status(message=m)), daemon=True).start()
         if self.args.test:
             self.main_src = {"kind": "test", "name": os.path.basename(self.args.test)}
             self.main = FileFeed(self, self.args.test)
