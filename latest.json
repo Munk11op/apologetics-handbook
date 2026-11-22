@@ -1,14 +1,14 @@
 {
- "version": "11.3.0",
- "date": "2026-11-21",
+ "version": "11.4.0",
+ "date": "2026-11-22",
  "notes": [
-  "A new layout: an app with a side rail (owner's choice of three layouts). The handbook is no longer one very long page:",
-  "A slim rail on the left (bottom tabs on phones) goes to Home, the Library, the Bible, Practice, Live, Ask and Spar, with Search and More at the bottom.",
-  "Home is a dashboard: the question box, then Keep going (continue, practice, saved, mastered), then who you're talking with.",
-  "The Library shows every topic as a tile, grouped by part, with its cards, ratings and videos; type to filter the tiles.",
-  "Each topic opens on its own page with a breadcrumb back to the Library, the previous and next topics at the end, and (on wide screens) its cards listed on the right.",
-  "Filters and searches that span the whole handbook show Results; clearing them goes back where you were. The back button, shared links to a card, and every search result still land in the right place.",
-  "On phones the tabs are Home, Library, Bible, Live, Practice and More (Ask, Spar, Go to anything, Saved cards, Video library, Progress, Settings, What's new).",
+  "Every part redesigned, not just recoloured (owner request):",
+  "Cards are split in two: on the left the title, rating, the 30-second reply and the actions (which stay in view as you scroll); on the right the argument as a timeline (objection, key texts, answer, evidence…). Bible references show as tappable chips. Phones stack the two.",
+  "Topic pages open with a banner (code, title, card and video counts). \"New terms\" fold into one line you can open, and the filters hide behind one \"Filters\" button.",
+  "The answer view has two columns: what to say on the left; Key Scripture, questions to ask and \"If they say…\" as cards on the right. Its buttons float in a small bar.",
+  "Live is a studio: a full-width listen button, a status light, what they said as chat bubbles and each answer as a card.",
+  "Practice is a flashcard with large colour-coded grade buttons (Again, Hard, Good, Easy).",
+  "Panels (Ask, Settings, the verse viewer, the word study, More) slide in from the right; on phones they rise from the bottom.",
   "Nothing in the teaching changed."
  ],
  "page": {
@@ -24,13 +24,13 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "82d242830fad6abfd55644572569e77a30ec44c3e14aaab9df351cee8dd96348",
-    "size": 3981679
+    "sha256": "d0f26c8a5c378968182c3956b96738c1a961207938a63339355913c63ab8ebdd",
+    "size": 3993366
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "cb645113a2834cf74871897c18d75e24849e16b18d19ee12cdd62748190a4192",
+    "sha256": "238753eeb1423609390e225eac936a36adf6e458b25ec598009338129ecff7d1",
     "size": 37715
    },
    {
