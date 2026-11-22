@@ -1,15 +1,15 @@
 {
- "version": "11.4.0",
+ "version": "12.0.0",
  "date": "2026-11-22",
  "notes": [
-  "Every part redesigned, not just recoloured (owner request):",
-  "Cards are split in two: on the left the title, rating, the 30-second reply and the actions (which stay in view as you scroll); on the right the argument as a timeline (objection, key texts, answer, evidence…). Bible references show as tappable chips. Phones stack the two.",
-  "Topic pages open with a banner (code, title, card and video counts). \"New terms\" fold into one line you can open, and the filters hide behind one \"Filters\" button.",
-  "The answer view has two columns: what to say on the left; Key Scripture, questions to ask and \"If they say…\" as cards on the right. Its buttons float in a small bar.",
-  "Live is a studio: a full-width listen button, a status light, what they said as chat bubbles and each answer as a card.",
-  "Practice is a flashcard with large colour-coded grade buttons (Again, Hard, Good, Easy).",
-  "Panels (Ask, Settings, the verse viewer, the word study, More) slide in from the right; on phones they rise from the bottom.",
-  "Nothing in the teaching changed."
+  "Royal: royal purple and white, black for structure; built from a written design brief (UIBRIEF.md, owner request \"times that by 10… look professional\"):",
+  "White pages and cards, royal purple for actions and identity, black for the side rail, the home band, the answer-view and Bible headers, and the footer. Quieter shapes and shadows; no glows or stars.",
+  "Answers as you type: on Home the three closest answers appear under the box as you type (title, rating, the start of the 30-second reply); tap one, or use the arrow keys, to open it.",
+  "The app stays around you: on computers the side rail stays visible beside the Bible and the answer view.",
+  "Scripture looks like Scripture: quoted verses use a serif typeface.",
+  "The Library has part buttons to jump straight to Islam, Other worldviews and so on, and Home and the Library end with a footer (version, credits, Settings, What's new, downloads).",
+  "The LSB: \"Read in the LSB ↗\" in the Bible reader and the word study opens the same chapter or verse on LSBible.org. The LSB is copyrighted: its free permission allows at most 1,000 verses and does not allow bulk downloading or building a dataset, so the full text can't be bundled without written permission (LSBPERMISSIONREQUEST.md is a ready-to-send request).",
+  "Themes: Royal (light) is the default; Midnight (dark), Match my device, Sepia and High contrast remain."
  ],
  "page": {
   "online": "https://munk11op.github.io/apologetics-handbook/",
@@ -24,13 +24,13 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "d0f26c8a5c378968182c3956b96738c1a961207938a63339355913c63ab8ebdd",
-    "size": 3993366
+    "sha256": "579e6a1214cd305ed5c6b608c6666872cd42b0c1d7386a152c4d7cca6e4597b4",
+    "size": 4003342
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "238753eeb1423609390e225eac936a36adf6e458b25ec598009338129ecff7d1",
+    "sha256": "03a0a1e47f0e3206d3688727ce188ac6c2fff06eff0e949fb02fc33e05716ffc",
     "size": 37715
    },
    {

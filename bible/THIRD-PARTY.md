@@ -49,7 +49,7 @@ Each text is one file, `bible/<ID>.js`, loaded only when the reader opens it. Bu
 
 **Word study** (`bible/words/*.js`, built by `tools/bible/build_words.py`): every Hebrew and Greek word with its transliteration, English gloss and Strong's number, and a brief lexicon. Data from STEPBible.org, created by Tyndale House, Cambridge: TAHOT (Hebrew Old Testament, Leningrad Codex), TAGNT (Greek New Testament, with the printed editions each word appears in), TBESH and TBESG (brief Hebrew and Greek lexicons). License: Creative Commons Attribution 4.0. Source: https://stepbible.github.io/STEPBible-Data/ (downloaded 2026-11-20, vendored gzipped in `vendor/stepbible/`). Change note, as the license asks: the data is reformatted only; morphology codes are left out, lexicon definitions longer than about 1,100 characters (Hebrew) or 1,400 characters (Greek) are shortened with "…", and the counts of how each word is rendered are computed from the glosses. The word-study panel names the source and links to it.
 
-Copyrighted translations (LSB, NASB 1995, NKJV, ESV) are **not** bundled. The verse viewer links out to read them (read.lsbible.org, biblegateway.com) and to an interlinear (biblehub.com). The links open only when you tap them.
+Copyrighted translations (LSB, NASB 1995, NKJV, ESV) are **not** bundled. The Bible reader and the word study have "Read in the LSB ↗", which opens read.lsbible.org at the same passage when tapped; no LSB text is stored (its permission excludes bulk downloads and datasets; see LSB_PERMISSION_REQUEST.md). The verse viewer links out to read them (read.lsbible.org, biblegateway.com) and to an interlinear (biblehub.com). The links open only when you tap them.
 
 ## Live (speech to text), standalone page
 
