@@ -1,15 +1,12 @@
 {
- "version": "13.0.0",
+ "version": "13.1.0",
  "date": "2026-11-22",
  "notes": [
-  "Regal: the final redesign. Deep royal purple and gold on warm ivory, black for structure, and a book serif (Newsreader) for every heading. Midnight (dark) carries the same purple and gold.",
-  "The LSB is in the translation list. Choose \"LSB · Legacy Standard Bible\" like any other translation, alone or beside another Bible. Because the LSB is copyrighted (its publisher allows quoting at most 1,000 verses and no bulk copies), the reader shows LSBible.org's own page for the chapter inside the app instead of storing the text. It needs the internet, and it can't appear on the claude.ai link (claude.ai doesn't let a page show another site); it works on the website, the desktop app and the downloaded copy. The link-out buttons are gone.",
-  "Far more information, all drawn from the handbook itself:",
-  "Home: the handbook in numbers (cards, topics, Bible references, Qur'an passages, hadith, Bible texts, glossary terms, videos; tap any of them), the most-used Bible passages and the most-cited Qur'an passages and hadith, and a tile for everything the app can do.",
-  "Library tiles: how many verses, Qur'an passages and hadith each topic cites, and how long it takes to read.",
-  "Topic pages: what the topic cites, its key passages (tap to read them), its Qur'an and hadith, and related topics (the ones that share the most references).",
-  "Cards: what each card cites and its reading time, and \"Related cards\" (cards that share its references).",
-  "A new Guide (on the rail, and under More on phones): Overview (the numbers, how the arguments are rated, how the handbook works), a searchable Glossary of all 197 terms, a Scripture index of every passage cited (Bible, Qur'an, hadith) with the topics that use it, the Bible translations with what each is based on and its license, keyboard shortcuts, and About (privacy and credits)."
+  "25 new cards on Islam (owner request; the first batch), in a new topic: 2N · More Arguments and Answers (Second Series).",
+  "Seven arguments, each with the best Muslim reply, an honest rating and questions to ask: saved or not? (Qur'an 2:62 and 5:69 beside 3:85); inheritance shares that add up to more than the estate (4:11–12); Qur'an 4:34 and the treatment of wives; a woman's testimony (2:282); captive women (4:24; 23:5–6); revelations that favored the Prophet (33:37; 33:50–51; 66:1); and clear and unclear verses (3:7). None is rated STRONG. Six are MODERATE, and the 3:7 card is rated WEAK and says not to lean on it.",
+  "Eighteen answers to objections Muslims raise: \"I was sent only to the lost sheep of Israel\"; the sign of Jonah; Hebrews 5:7; \"servant, man and prophet\"; Jesus praying on his face; \"My God and your God\"; \"firstborn of all creation\"; pork; \"Jesus was a Muslim\"; original sin; Psalm 84 and Baca; the Romans prophecy (30:2–4); \"Paul admitted he lied\"; Thomas's words as an exclamation; \"son of God\" used of many; \"no one has ever seen God\"; \"worship God alone\"; and \"it is unjust to punish the innocent.\"",
+  "How they were checked. Every Bible quotation is the Berean Standard Bible and every Qur'an quotation is Pickthall (both public domain, both inside the app). A script (tools/checkquotes.py) confirmed that all 197 quoted phrases appear word for word in the chapter cited. Hadith are summarized, never quoted: Bukhari 2658 and 4788 were read in full first, and 3431 was already in the handbook. One hadith whose number could not be confirmed was left out.",
+  "The other 186 cards are unchanged, byte for byte. Home now shows 211 answer cards, and search finds the new ones."
  ],
  "page": {
   "online": "https://munk11op.github.io/apologetics-handbook/",
@@ -24,13 +21,13 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "2c317ddcd671e2f12402a75e403d9680a6bf2bf3db98f77748e3fe3da9fa20f1",
-    "size": 4052058
+    "sha256": "6204891d2ccfb2bc2a4b28dd98cf880872b8761d6e433b00db69040b5cfc88c1",
+    "size": 4236041
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "d9536331120292c591984c9636ae1d07f69b559cbcc324a98ba9b88f1e246b1c",
+    "sha256": "0d2d70cfdb41a09beb6172d5653c2df34f59ec81ea31c1848c41a1e182c17c71",
     "size": 37715
    },
    {
