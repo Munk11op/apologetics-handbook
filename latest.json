@@ -1,12 +1,14 @@
 {
- "version": "13.1.0",
+ "version": "13.2.0",
  "date": "2026-11-22",
  "notes": [
-  "25 new cards on Islam (owner request; the first batch), in a new topic: 2N · More Arguments and Answers (Second Series).",
-  "Seven arguments, each with the best Muslim reply, an honest rating and questions to ask: saved or not? (Qur'an 2:62 and 5:69 beside 3:85); inheritance shares that add up to more than the estate (4:11–12); Qur'an 4:34 and the treatment of wives; a woman's testimony (2:282); captive women (4:24; 23:5–6); revelations that favored the Prophet (33:37; 33:50–51; 66:1); and clear and unclear verses (3:7). None is rated STRONG. Six are MODERATE, and the 3:7 card is rated WEAK and says not to lean on it.",
-  "Eighteen answers to objections Muslims raise: \"I was sent only to the lost sheep of Israel\"; the sign of Jonah; Hebrews 5:7; \"servant, man and prophet\"; Jesus praying on his face; \"My God and your God\"; \"firstborn of all creation\"; pork; \"Jesus was a Muslim\"; original sin; Psalm 84 and Baca; the Romans prophecy (30:2–4); \"Paul admitted he lied\"; Thomas's words as an exclamation; \"son of God\" used of many; \"no one has ever seen God\"; \"worship God alone\"; and \"it is unjust to punish the innocent.\"",
-  "How they were checked. Every Bible quotation is the Berean Standard Bible and every Qur'an quotation is Pickthall (both public domain, both inside the app). A script (tools/checkquotes.py) confirmed that all 197 quoted phrases appear word for word in the chapter cited. Hadith are summarized, never quoted: Bukhari 2658 and 4788 were read in full first, and 3431 was already in the handbook. One hadith whose number could not be confirmed was left out.",
-  "The other 186 cards are unchanged, byte for byte. Home now shows 211 answer cards, and search finds the new ones."
+  "Handbook Live (the desktop app) now opens looking like the website (owner: \"the local handbook looks differently\"):",
+  "It opens as a large window in the middle of the screen, showing Home with the side rail. Before, it opened as a narrow strip at the right edge with the Live panel covering the handbook.",
+  "It no longer sits on top of your other windows unless you ask (\"Keep on top\" in Live).",
+  "Live still listens from the moment the app opens. A button beside the side rail shows what it is doing (\"● Listening\", \"Live is paused\") and counts new answers, and a short message names each answer found. One press opens Live.",
+  "Side window: in Live, \"Side window\" shrinks the app to the narrow strip that stays on top, to sit beside a call or a video. \"Full window\" brings it back. The app remembers which one you chose.",
+  "Fixes found on the way: the \"Listening\" button was hidden behind the side rail on computers; the page now makes room for the whole Live panel (it overlapped the page by 40 pixels); and the compact strip and the side window pin themselves on top after they resize (resizing used to un-pin the window).",
+  "The handbook's content is unchanged."
  ],
  "page": {
   "online": "https://munk11op.github.io/apologetics-handbook/",
@@ -21,14 +23,14 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "6204891d2ccfb2bc2a4b28dd98cf880872b8761d6e433b00db69040b5cfc88c1",
-    "size": 4236041
+    "sha256": "b7ac867fbd42eeb7a185a0b80053011713fbed5f77b2985e84589126ae41b71b",
+    "size": 4238700
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "0d2d70cfdb41a09beb6172d5653c2df34f59ec81ea31c1848c41a1e182c17c71",
-    "size": 37715
+    "sha256": "92091463e2f99430c7e64129cacaa90cb8d5b81bac141b849320b4c7e9b78404",
+    "size": 40788
    },
    {
     "path": "app_audio.py",

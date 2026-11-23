@@ -47,7 +47,7 @@ def mac_sound_input(sc):
     return virt or sc.default_microphone(), virt is not None
 PAGE = "Apologetics_Handbook.html"
 SETTINGS = os.path.join(HERE, "settings.json")
-APP_VERSION = "13.1.0"   # kept in step with the handbook's VERSION file by release.py
+APP_VERSION = "13.2.0"   # kept in step with the handbook's VERSION file by release.py
 
 
 def newer(a, b):
@@ -800,11 +800,66 @@ def check_sound():
         say(f"{kind:10} {e['name'][:52]:52} {e.get('level', 0):7.4f} {bar}{err}")
 
 
-class Api:
-    """Lets the page pin or unpin the window."""
+FULL, SIDE = "full", "side"
 
-    def __init__(self):
+
+def window_box(mode, screen_w=None, screen_h=None):
+    """Where the Handbook Live window opens.
+
+    "full" (the default since 13.2): a large centred window that is not pinned on top, so the handbook looks the
+    way it does on the website. "side": the narrow strip at the right edge that stays on top, to sit beside a call
+    or a video (how the window always opened before 13.2). The Live panel's "Side window" button switches.
+    """
+    side = mode == SIDE
+    if not (screen_w and screen_h):
+        return {"width": 500 if side else 1280, "height": 880 if side else 860, "x": None, "y": None, "on_top": side}
+    if side:
+        w, h = 500, min(920, screen_h - 90)
+        return {"width": w, "height": h, "x": max(0, screen_w - w - 24), "y": 40, "on_top": True}
+    w = min(1480, screen_w - 120) if screen_w >= 1100 else screen_w
+    h = min(980, screen_h - 110) if screen_h >= 760 else screen_h
+    return {"width": w, "height": h, "x": max(0, (screen_w - w) // 2), "y": max(0, (screen_h - h) // 2 - 16),
+            "on_top": False}
+
+
+class Api:
+    """Lets the page pin or unpin the window, and switch between the large window and the narrow side window."""
+
+    def __init__(self, mode=FULL, remember=None):
         self._window = None  # private, so the window library doesn't try to expose it to the page
+        self._mode = SIDE if mode == SIDE else FULL
+        self._remember = remember
+        self._screen = (None, None)
+
+    def window_mode(self):
+        return self._mode
+
+    def set_window(self, mode):
+        """Switch between the large window ("full") and the narrow always-on-top one ("side"); remember the choice."""
+        mode = SIDE if mode == SIDE else FULL
+        self._mode = mode
+        if self._remember:
+            try:
+                self._remember(mode)
+            except Exception:  # noqa: BLE001
+                pass
+        win = self._window
+        if win:
+            def go():
+                try:
+                    box = window_box(mode, *self._screen)
+                    try:
+                        win.restore()  # leave a maximized state, or the new size is ignored
+                    except Exception:  # noqa: BLE001
+                        pass
+                    win.resize(box["width"], box["height"])
+                    if box["x"] is not None:
+                        win.move(box["x"], box["y"])
+                    win.on_top = box["on_top"]  # last: resizing a pinned window un-pins it
+                except Exception:  # noqa: BLE001
+                    pass
+            threading.Thread(target=go, daemon=True).start()
+        return mode
 
     def set_on_top(self, on):
         win = self._window
@@ -819,11 +874,13 @@ class Api:
             def go():
                 try:
                     if on:
-                        self._size = (win.width, win.height)
+                        self._size, self._was_top = (win.width, win.height), bool(win.on_top)
                         win.resize(520, 190)
+                        win.on_top = True  # after the resize: resizing a pinned window un-pins it
                     else:
                         w, h = getattr(self, "_size", None) or (500, 880)
                         win.resize(w, h)
+                        win.on_top = getattr(self, "_was_top", self._mode == SIDE)
                 except Exception:  # noqa: BLE001
                     pass
             threading.Thread(target=go, daemon=True).start()
@@ -901,16 +958,23 @@ def main():
                 webbrowser.open(url)
                 while True:
                     time.sleep(1)
-            api = Api()
-            w, h = 500, 880
+            mode = SIDE if load_settings().get("window") == SIDE else FULL
+
+            def remember(m):  # read the file again first, so nothing else saved there is lost
+                s = load_settings()
+                s["window"] = m
+                save_settings(s)
+                app.settings["window"] = m
+            api = Api(mode, remember)
             try:
                 scr = webview.screens[0]
-                h = min(920, scr.height - 90)
-                x, y = scr.width - w - 24, 40
+                api._screen = (scr.width, scr.height)
             except Exception:  # noqa: BLE001
-                x = y = None
-            win = webview.create_window("Handbook Live", url, width=w, height=h, x=x, y=y, on_top=True,
-                                        min_size=(320, 150), js_api=api, background_color="#F4F5F1")
+                pass
+            box = window_box(mode, *api._screen)
+            win = webview.create_window("Handbook Live", url, width=box["width"], height=box["height"], x=box["x"],
+                                        y=box["y"], on_top=box["on_top"], min_size=(320, 150), js_api=api,
+                                        background_color="#FAF8F3")
             api._window = win
             threading.Thread(target=hotkey_loop, args=(api,), daemon=True).start()
             webview.start(private_mode=False, storage_path=os.path.join(HERE, ".webview"))
