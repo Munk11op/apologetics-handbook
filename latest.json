@@ -1,15 +1,15 @@
 {
- "version": "12.0.0",
+ "version": "13.0.0",
  "date": "2026-11-22",
  "notes": [
-  "Royal: royal purple and white, black for structure; built from a written design brief (UIBRIEF.md, owner request \"times that by 10… look professional\"):",
-  "White pages and cards, royal purple for actions and identity, black for the side rail, the home band, the answer-view and Bible headers, and the footer. Quieter shapes and shadows; no glows or stars.",
-  "Answers as you type: on Home the three closest answers appear under the box as you type (title, rating, the start of the 30-second reply); tap one, or use the arrow keys, to open it.",
-  "The app stays around you: on computers the side rail stays visible beside the Bible and the answer view.",
-  "Scripture looks like Scripture: quoted verses use a serif typeface.",
-  "The Library has part buttons to jump straight to Islam, Other worldviews and so on, and Home and the Library end with a footer (version, credits, Settings, What's new, downloads).",
-  "The LSB: \"Read in the LSB ↗\" in the Bible reader and the word study opens the same chapter or verse on LSBible.org. The LSB is copyrighted: its free permission allows at most 1,000 verses and does not allow bulk downloading or building a dataset, so the full text can't be bundled without written permission (LSBPERMISSIONREQUEST.md is a ready-to-send request).",
-  "Themes: Royal (light) is the default; Midnight (dark), Match my device, Sepia and High contrast remain."
+  "Regal: the final redesign. Deep royal purple and gold on warm ivory, black for structure, and a book serif (Newsreader) for every heading. Midnight (dark) carries the same purple and gold.",
+  "The LSB is in the translation list. Choose \"LSB · Legacy Standard Bible\" like any other translation, alone or beside another Bible. Because the LSB is copyrighted (its publisher allows quoting at most 1,000 verses and no bulk copies), the reader shows LSBible.org's own page for the chapter inside the app instead of storing the text. It needs the internet, and it can't appear on the claude.ai link (claude.ai doesn't let a page show another site); it works on the website, the desktop app and the downloaded copy. The link-out buttons are gone.",
+  "Far more information, all drawn from the handbook itself:",
+  "Home: the handbook in numbers (cards, topics, Bible references, Qur'an passages, hadith, Bible texts, glossary terms, videos; tap any of them), the most-used Bible passages and the most-cited Qur'an passages and hadith, and a tile for everything the app can do.",
+  "Library tiles: how many verses, Qur'an passages and hadith each topic cites, and how long it takes to read.",
+  "Topic pages: what the topic cites, its key passages (tap to read them), its Qur'an and hadith, and related topics (the ones that share the most references).",
+  "Cards: what each card cites and its reading time, and \"Related cards\" (cards that share its references).",
+  "A new Guide (on the rail, and under More on phones): Overview (the numbers, how the arguments are rated, how the handbook works), a searchable Glossary of all 197 terms, a Scripture index of every passage cited (Bible, Qur'an, hadith) with the topics that use it, the Bible translations with what each is based on and its license, keyboard shortcuts, and About (privacy and credits)."
  ],
  "page": {
   "online": "https://munk11op.github.io/apologetics-handbook/",
@@ -24,13 +24,13 @@
    {
     "path": "Apologetics_Handbook.html",
     "src": "index.html",
-    "sha256": "579e6a1214cd305ed5c6b608c6666872cd42b0c1d7386a152c4d7cca6e4597b4",
-    "size": 4003342
+    "sha256": "2c317ddcd671e2f12402a75e403d9680a6bf2bf3db98f77748e3fe3da9fa20f1",
+    "size": 4052058
    },
    {
     "path": "live_app.py",
     "src": "app/live_app.py",
-    "sha256": "03a0a1e47f0e3206d3688727ce188ac6c2fff06eff0e949fb02fc33e05716ffc",
+    "sha256": "d9536331120292c591984c9636ae1d07f69b559cbcc324a98ba9b88f1e246b1c",
     "size": 37715
    },
    {
@@ -48,110 +48,134 @@
    {
     "path": "bible/ASV.js",
     "src": "bible/ASV.js",
-    "sha256": "b3ed0ac4adb965f26081675d3a9e0fd8171c651fedcef8343b021efe4ee97ab9",
-    "size": 1638220
+    "sha256": "66b3265edfbb55fa1fe21d524a4a30e6373942c63023fddbdbebe4b117b9ef1f",
+    "size": 1638228
    },
    {
     "path": "bible/BSB.js",
     "src": "bible/BSB.js",
-    "sha256": "7e0e800b91552a1e59a199538e01e057f41e742f4c4768c1bf3ed7edcfdc7608",
-    "size": 1627238
+    "sha256": "247f0fae09870b343f3c710cb0adf0128d2e9f5e84a85a325e9cadbf143ada4e",
+    "size": 1627246
    },
    {
     "path": "bible/BYZ.js",
     "src": "bible/BYZ.js",
-    "sha256": "f7ef8c773c0685dd399c2b4c8997bc99223ce16d100823c046cfa2f94653feac",
-    "size": 536026
+    "sha256": "97a44151f31d08d86083b558bfbe26e52a77b5f4fddd048ec150b4a73c82021b",
+    "size": 536034
+   },
+   {
+    "path": "bible/creeds.js",
+    "src": "bible/creeds.js",
+    "sha256": "77eb7f2eeb12055db8b85ee5ed2bdc4931912c645401b37ba3fd671197a3ea4d",
+    "size": 444793
    },
    {
     "path": "bible/DBY.js",
     "src": "bible/DBY.js",
-    "sha256": "6873dfab01bc8b81f8f40135a99ba0261b8cfc9548d5be1f508610a5e53a1f9a",
-    "size": 1635847
+    "sha256": "3b157f3c9cefcb2d4f2b6b4709ad15afa2d59dd741ff0a70f58616193140c43f",
+    "size": 1635855
    },
    {
     "path": "bible/DRA.js",
     "src": "bible/DRA.js",
-    "sha256": "e0fd4389481302cd8eb4f340b053f9a1228a2c5bb20a430ccd89430af2cd8f5d",
-    "size": 1877443
+    "sha256": "c9c17c6193e0e6c1f0113e26d542f577f68a5e28a1ef35b9a678cd1a42d39bb8",
+    "size": 1877451
    },
    {
     "path": "bible/ETH.js",
     "src": "bible/ETH.js",
-    "sha256": "e5ae4b8f1c6090562dc0b4b5fd81cfc9d7a516695a3cbf0c0f0595f81b0de09e",
-    "size": 410968
+    "sha256": "b575f09d2969331aada117b9ee067118ef49e62958f1cc055a48155fd6f1151e",
+    "size": 410976
    },
    {
     "path": "bible/GNV.js",
     "src": "bible/GNV.js",
-    "sha256": "cedd56fc27b63f21685dbfc2d63bbbd277b610a2755c511c5c51eeffe6f5fe4f",
-    "size": 1660511
+    "sha256": "4008d7c3536f385c6c296206e2faf4a88af9a75d36a4ff454bf2131d6f41769b",
+    "size": 1660519
    },
    {
     "path": "bible/KJV.js",
     "src": "bible/KJV.js",
-    "sha256": "faa8b217661e2c353560c4d1530995d24b7497dfc06fca0ee53d9a2829803cd1",
-    "size": 1997521
+    "sha256": "e985da9fdef716e485bd926d7c3b3500a19d1c6fefb481a0dbe692171396d86d",
+    "size": 1997529
    },
    {
     "path": "bible/LSV.js",
     "src": "bible/LSV.js",
-    "sha256": "db7748e60b506e6a743754a4bc741f9bf65aee136d8418f80f0c9978bf4baff9",
-    "size": 1614882
+    "sha256": "08191b5c7c12b8dcb1beb2ec389c72fc4507e74d040b37e162e3a2f044cf8afc",
+    "size": 1614890
    },
    {
     "path": "bible/LXX.js",
     "src": "bible/LXX.js",
-    "sha256": "81ee8e35fc384c52477c4764396ea7383f40406425fd12b5f6bd863b27f4ef9c",
-    "size": 2021133
+    "sha256": "2cd66f22c9f3d0bed9779dbee3e2ccee0243089d4d5a3ff684eec96770013c4e",
+    "size": 2021141
    },
    {
     "path": "bible/LXXE.js",
     "src": "bible/LXXE.js",
-    "sha256": "db9db44f29f2ee7cdac3b0e61154a41e73fa3a803c902689be42b6c421e3237c",
-    "size": 1572569
+    "sha256": "ad1c1c184a58c2c06e238216c2b0465ce06d3ae31ae1e739c9b997d9ac609e55",
+    "size": 1572577
    },
    {
     "path": "bible/MUR.js",
     "src": "bible/MUR.js",
-    "sha256": "ac9374d9df1209dd74a7cae6340d5f6fa3533df86ee0e605304871333dad64c6",
-    "size": 414286
+    "sha256": "a49b50dff72e06ba67f5e6c46e105e2e23a683470bd574f34edbfe1a97077444",
+    "size": 414294
    },
    {
     "path": "bible/PESH.js",
     "src": "bible/PESH.js",
-    "sha256": "7eb924cabd0c7e14375c6bd5db0e106391919bc6060dc42e1f1be0cdd653acae",
-    "size": 336975
+    "sha256": "93bb9ce634ba257ab1423ebe59ef41ddfba8147169af755478c4ea0a5b63f846",
+    "size": 336983
+   },
+   {
+    "path": "bible/QAR.js",
+    "src": "bible/QAR.js",
+    "sha256": "87b46b08a3589b39700d86a82d25634e784aabceec6e424f2bdd620cf5c3af9c",
+    "size": 348212
+   },
+   {
+    "path": "bible/QPK.js",
+    "src": "bible/QPK.js",
+    "sha256": "0f7dba6d3bb3bb8e061feb9b8528e8e581d18530e7123cca7d3567b0c85ff09d",
+    "size": 354954
+   },
+   {
+    "path": "bible/QRD.js",
+    "src": "bible/QRD.js",
+    "sha256": "60677f690cf4e9a597419b354e7d97c9bcafb59b24c2165ad62ec4dd2179b0fc",
+    "size": 368757
    },
    {
     "path": "bible/TCGNT.js",
     "src": "bible/TCGNT.js",
-    "sha256": "9b985c5f1caaaa04dc000349231f69009be55e9c88547cd8ea335f371b440942",
-    "size": 536551
+    "sha256": "c85e40d93583bf56caca189430ad63e03e23e924b28b83f57eca09749ecf9a88",
+    "size": 536559
    },
    {
     "path": "bible/TR.js",
     "src": "bible/TR.js",
-    "sha256": "bcb11a940da9b343db2cdf06a57ad0b988e363b1699a002f7f5dd7cefdf8c821",
-    "size": 541420
+    "sha256": "77a7f8ca25b34ad7eb5ba824cd219a4b152fdd6d08db27a5c313d94e18284816",
+    "size": 541428
    },
    {
     "path": "bible/VUL.js",
     "src": "bible/VUL.js",
-    "sha256": "63342d651fac83fd9008f28ef7e537bf33609632ecddc9b545aebee278151789",
-    "size": 1849985
+    "sha256": "d6e34e077f306c5f792a8590b5da4035ee1fc953e2aec205ec8a9d55d9cbeeea",
+    "size": 1849993
    },
    {
     "path": "bible/WEB.js",
     "src": "bible/WEB.js",
-    "sha256": "10eea278793e351a07ebadcd2ae6021a3001fcba44e863747d2d55e67db58277",
-    "size": 1608765
+    "sha256": "708a2b12a818a7c02f403b2351ca449e5421e82ee560eca7baeb8ed3409c14ad",
+    "size": 1608773
    },
    {
     "path": "bible/WLC.js",
     "src": "bible/WLC.js",
-    "sha256": "60a52bdeef0bdd7754c65eeaa88033c7a696d58afd78337e89539d1969ef9d3c",
-    "size": 1767262
+    "sha256": "0e3a7924dbfe036a96a8ca92e94735d104fbeb47dfdb7b787733f1df9280260a",
+    "size": 1767270
    },
    {
     "path": "bible/words/1_chronicles.js",
@@ -562,10 +586,16 @@
     "size": 17422
    },
    {
+    "path": "bible/xref.js",
+    "src": "bible/xref.js",
+    "sha256": "d54f78c8314d72a7612c63c452db8b5d929ed451e317620452e2e1ce230bfbdd",
+    "size": 961859
+   },
+   {
     "path": "bible/YLT.js",
     "src": "bible/YLT.js",
-    "sha256": "23811feaa01b8e9830e556e918bf23b3f314732321c804caedb2e9b8bbc0b552",
-    "size": 1630729
+    "sha256": "e3c3e9271d02705b4c6a2ecc67040d2a2fd5523225dd767494949274dd270c87",
+    "size": 1630737
    }
   ]
  }

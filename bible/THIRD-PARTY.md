@@ -49,7 +49,22 @@ Each text is one file, `bible/<ID>.js`, loaded only when the reader opens it. Bu
 
 **Word study** (`bible/words/*.js`, built by `tools/bible/build_words.py`): every Hebrew and Greek word with its transliteration, English gloss and Strong's number, and a brief lexicon. Data from STEPBible.org, created by Tyndale House, Cambridge: TAHOT (Hebrew Old Testament, Leningrad Codex), TAGNT (Greek New Testament, with the printed editions each word appears in), TBESH and TBESG (brief Hebrew and Greek lexicons). License: Creative Commons Attribution 4.0. Source: https://stepbible.github.io/STEPBible-Data/ (downloaded 2026-11-20, vendored gzipped in `vendor/stepbible/`). Change note, as the license asks: the data is reformatted only; morphology codes are left out, lexicon definitions longer than about 1,100 characters (Hebrew) or 1,400 characters (Greek) are shortened with "…", and the counts of how each word is rendered are computed from the glosses. The word-study panel names the source and links to it.
 
-Copyrighted translations (LSB, NASB 1995, NKJV, ESV) are **not** bundled. The Bible reader and the word study have "Read in the LSB ↗", which opens read.lsbible.org at the same passage when tapped; no LSB text is stored (its permission excludes bulk downloads and datasets; see LSB_PERMISSION_REQUEST.md). The verse viewer links out to read them (read.lsbible.org, biblegateway.com) and to an interlinear (biblehub.com). The links open only when you tap them.
+Copyrighted translations (LSB, NASB 1995, NKJV, ESV) are **not** bundled. The LSB appears in the reader's translation list: choosing it shows read.lsbible.org's own page for the chapter in a frame (a request made only then); no LSB text is stored or copied (its permission excludes bulk downloads and datasets; see LSB_PERMISSION_REQUEST.md). The verse viewer links out to read them (read.lsbible.org, biblegateway.com) and to an interlinear (biblehub.com). The links open only when you tap them.
+
+## The source library (version 13; `bible/QAR.js`, `QPK.js`, `QRD.js`, `xref.js`, `creeds.js`)
+
+Whole texts from named sources, built by `tools/bible/build_full.py` and `tools/bible/build_sources.py`; nothing is reworded.
+
+| What | Source | License and terms |
+|---|---|---|
+| Qur'an, Arabic (Uthmani text) | Tanzil Project, tanzil.net (`vendor/quran/quran-uthmani.txt`, downloaded 2026-11-22) | Copyright © 2007–2021 Tanzil Project, Creative Commons Attribution 3.0. Used **verbatim** (its terms forbid changing the text), with the source named and linked in the reader's credit line and in Guide → About. |
+| Qur'an, English: Pickthall (1930) | tanzil.net translation file `en.pickthall` | Public domain (published 1930; the translator died in 1936). |
+| Qur'an, English: Rodwell (1861) | fawazahmed0/quran-api edition `eng-johnmedowsrodwe` (the API is released under the Unlicense) | Public domain (1861). |
+| Surah names | Tanzil metadata `quran-data.js` | With the Tanzil text, as above. |
+| Bible cross-references (the strongest eight per verse) | openbible.info/labs/cross-references (`vendor/xref/cross-references.zip`) | Creative Commons Attribution. Credited under every list and in Guide → About. Change note: only the eight highest-voted references per verse are kept. |
+| Creeds, confessions and catechisms (35 documents) | NonlinearFruit/Creeds.json (`vendor/creeds/*.json`) | Only the documents the collection marks "Public Domain" are included. Left out because they are copyrighted: the Chicago Statement on Biblical Inerrancy, the Helvetic Consensus (1990 translation) and the Savoy Declaration (Reformed Standards edition). |
+
+Not added: a Bible dictionary (no clean public-domain source could be fetched) and the hadith collections (their English translations are copyrighted).
 
 ## Live (speech to text), standalone page
 
